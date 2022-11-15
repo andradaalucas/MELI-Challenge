@@ -1,24 +1,18 @@
 require('dotenv').config();
 const axios = require('axios');
-const { response } = require('express');
-//Guardo informacion importante en un archivo .env
-const {GET_ALL_ITEMS, GET_ITEM_BY_ID, GET_CATEGORIES} = process.env;
+//Guardo informacion sensible en un archivo .env
+const {GET_ALL_ITEMS, GET_ITEM_BY_ID, GET_CATEGORIES, GET_ITEM_BY_SEARCH} = process.env;
 
 const author = {
     name: "Lucas",
     lastname: "Andrada"
 };
 
-const getItemCategories = async(ids) => {
-    //Recibo un arreglo con todos los ids (para no perder ninguna categoria)
-        arrCategories = [];
-        for(let i = 0; i < ids.length ; i++){
-            const responseCategory = await axios.get(`${GET_CATEGORIES}${ids[i]}`);
-            const categoryNames = responseCategory.data.path_from_root.map(el => el.name);
-            arrCategories.push(categoryNames);
-        }
-        return arrCategories;
-}
+const getItemCategories = async(id) => {
+    const responseCategory = await axios.get(`${GET_CATEGORIES}${id}`);
+    const categoryNames = responseCategory.data.path_from_root.map(el => el.name);
+    return categoryNames;
+};
 
 
 
@@ -51,8 +45,36 @@ const getItemById = async (id) =>{
 };
 
 
+
+
 //Hago funcion get para traerme la info que voy a mostrar en el home
-const getAllItems = async ()  =>{
+const getAllItems = async (name)  =>{
+    if(name){
+        let nameQuery = name.split(" ").join("%20")
+        const getItemBySearch = await axios.get(`${GET_ITEM_BY_SEARCH}${nameQuery}`);
+        const responseItemBySearch =  getItemBySearch.data.results.map(el => {
+            return{
+                id : el.id,
+                title : el.title,
+                price : {
+                    currency : el.prices.prices[0].currency_id,
+                    amount : el.prices.prices[0].amount,
+                    decimals : ""
+                },
+                picture: el.thumbnail,
+                condition: el.condition,
+                free_shipping: el.shipping.free_shipping
+            };
+        });
+        //El producto que este en la primera posicion va a contener las categorias de la busqueda
+        const id = getItemBySearch.data.results[0].category_id;
+        const responseCategory = await getItemCategories(id);
+        return {
+            author,
+            category: responseCategory,
+            items : responseItemBySearch,
+        };
+    };
     const getItems = await axios.get(GET_ALL_ITEMS);
     const responseItems = getItems.data.results.map(el =>{
         return {
@@ -68,13 +90,8 @@ const getAllItems = async ()  =>{
             free_shipping: el.shipping.free_shipping
         };
     });
-    const arrId = getItems.data.results.map(el => el.category_id);
-    const responseCategory = await getItemCategories(arrId);
-    
-    
     return allItems = {
         author,
-        categories: responseCategory.flat(),
         items: responseItems
     };
 };

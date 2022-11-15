@@ -1,9 +1,12 @@
 import './App.css';
 
+import Home from './components/home/Home'
+
+
 function App() {
   return (
     <div className="App">
-      <h1>Challenge MELI</h1>
+      <Home/>
     </div>
   );
 }

@@ -1,11 +1,41 @@
-import React from 'react'
-import HomeStyle from './Home.module.css'
-import NavBar from '../navBar/NavBar'
+import React,{useState, useEffect} from 'react';
+import HomeStyle from './Home.module.css';
+import NavBar from '../navBar/NavBar';
+import Card from '../card/Card'
+import axios from "axios";
+import Banner from '../banner/Banner';
+
+
+
+
+
+const initialUrl = 'http://localhost:3001/api/items'
+
+
 
 function Home() {
-  return (<>
+  const[products, setProducts] = useState([]);
+
+
+  const allProducts = async (initialUrl) => {
+    await axios.get(initialUrl)
+    .then(response => response.data.items)
+    .then(data =>setProducts(data))
+    .catch(error => console.log(error))
+  }
+
+  useEffect(() => {
+    allProducts(initialUrl)
+  }, [])
+  
+
+
+
+  return (
+  <>
     <NavBar/>
-    <div>Home</div>
+    <Banner/>
+    <Card products={products}/>
   </>)
   
 }

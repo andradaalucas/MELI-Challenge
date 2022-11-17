@@ -2,7 +2,9 @@ require('dotenv').config();
 const axios = require('axios');
 //Guardo informacion sensible en un archivo .env
 const {GET_ALL_ITEMS, GET_ITEM_BY_ID, GET_CATEGORIES, GET_ITEM_BY_SEARCH} = process.env;
-const { separador } = require("./auxiliar.js")
+//Esta funcion es para separar el precio cada 3 cifras
+const { separador } = require("./auxiliar.js");
+
 const author = {
     name: "Lucas",
     lastname: "Andrada"

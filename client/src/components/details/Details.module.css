@@ -1,50 +1,70 @@
+/* Estilos de categoria */
+
 .renderCategory{
     text-align: center;
     margin-top: 15px;
 }
+
 .containerCategory{
     display: inline;
-   
 }
+
 .category{
-    
-    margin: 0 0 0 15px;
+    margin: var(--marginCategory);
     font-family: var(--proximaNovaMedium);
     font-weight: var(--weightNormal);
     font-size: var(--categorySize);
 }
-.container{
+
+.category::selection{
+    background-color: var(--selectColor);
+}
+
+
+/* Estilos del producto */
+.containerProduct{
     margin: 30px;
     padding: 15px;
     border-radius: 15px;
     display : flex;
     justify-content: space-around;
-    background-color: white;
+    background-color: var(--backgroundDetailColor);
 }
+
 .titleDetail{
     font-family: var(--proximaNovaMedium);
     font-size: var(--titleDetail);
 }
+
+.titleDetail::selection{   
+    background-color: var(--selectColor);
+}
+
+.condition{
+    color: var(--conditionNewColor);
+    font-size: var(--conditionSize);
+    font-family: var(--proximaNovaLight);
+    font-weight: var(--proximaNovaMedium);
+}
+
+.condition::selection{
+    background-color: var(--selectColor);
+}
+
 .priceDetail{
     font-family: var(--proximaNovaMedium);
     font-size: var(--priceDetail);
 }
-.description{
-    font-family: var(--proximaNovaMedium);
-    font-size: var(--descriptionDetail);
-    font-weight: var(--weightDetail);
-    color: rgba(60, 60, 60, 0.9);
+
+.priceDetail::selection{
+    background-color: var(--selectColor);
 }
-.descriptionText{
-    font-family: var(--proximaNovaMedium);
-    font-weight: var(--weightSuperLight);
-    font-size: var(--textDetail);
-    color : var(--descriptionTextColor); 
-}
+
 .containerButtons{
     display: flex;
     flex-direction: column;
 }
+
 .buttonBuy{
     display: block;
     color:var(--buttonTextColor);
@@ -52,27 +72,61 @@
     font-size: var(--buttonSize);
     font-family: var(--proximaNovaLight);
     border-radius: 5px;
-    padding: 10px 0;
+    padding: 15px 0;
+    border: none;
+    cursor: pointer;
 }
+
 .buttonBuy:hover{
     transition: 0.4s;
     background-color: var(--buttonHoverColor);
 }
+
 .buttonSave{
     background-color: var(--buttonSecundaryColor);
     color : var(--buttonSecundaryTextColor);
     font-size: var(--buttonSize);
     font-family: var(--proximaNovaLight);
     border-radius: 5px;
-    padding: 10px 0;
+    margin-top: 10px;
+    padding: 15px 0;
+    border: none;
+    cursor: pointer;
 }
+
 .buttonSave:hover{
     transition: 0.4s;
     background-color: var( --buttonSecundaryHoverColor);
 }
+
+
+/* Estilos de la descripcion */
+
 .containerDescription{
     margin: 30px;
     padding: 15px;
-    background-color: white;
+    background-color: var(--backgroundDetailColor);
     border-radius: 15px;
+}
+
+.description{
+    font-family: var(--proximaNovaMedium);
+    font-size: var(--descriptionDetail);
+    font-weight: var(--weightDetail);
+    color: var(--descriptionTitleColor);
+}
+
+.description::selection{
+    background-color: var(--selectColor);
+}
+
+.descriptionText{
+    font-family: var(--proximaNovaMedium);
+    font-weight: var(--weightSuperLight);
+    font-size: var(--textDetail);
+    color : var(--descriptionTextColor); 
+}
+
+.descriptionText::selection{
+    background-color: var(--selectColor);
 }

@@ -1,24 +1,24 @@
 import React,{ useEffect, lazy, Suspense} from 'react';
 import NavBar from '../navBar/NavBar';
-// import Card from '../card/Card'
 import Banner from '../banner/Banner';
 import Categories from '../categories/Categories';
-import {getProductsDefult, clearHome} from '../../redux/action';
+import {getProductsDefult} from '../../redux/action';
 import {useDispatch, useSelector} from 'react-redux';
-import HomeStyle from './Home.module.css'
-const Card = lazy (() => import("../card/Card"))
-
+import HomeStyle from './Home.module.css';
+//Hago una importancion diferida porque va tardar en renderizarse
+const Card = lazy (() => import("../card/Card"));
 
 
 
 function Home() {
-  const dispatch = useDispatch()
-  const productsDefault = useSelector((state) => state.productsDefault)
+  const dispatch = useDispatch();
+
+  //Guardo el estado en una variable para despues pasar el estado por props a los componentes
+  const productsDefault = useSelector((state) => state.productsDefault);
+
+  //Cuando se monta el componente despacho la funcion para traerme los productos
   useEffect(() => {
     dispatch(getProductsDefult())
-    // return () =>{
-    //   dispatch(clearHome())
-    // }
   }, [dispatch])
   
 
@@ -37,10 +37,10 @@ function Home() {
     </Suspense>
     </>)
     :
-    (<h1></h1>)
+    (<p>Espera...</p>)
   }   
 </>)
   
 }
 
-export default Home
+export default Home;

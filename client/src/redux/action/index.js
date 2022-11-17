@@ -5,6 +5,9 @@ export const GET_PRODUCT_BY_SEARCH = "GET_PRODUCT_BY_SEARCH";
 export const CLEAR = "CLEAR"
 export const CLEAR_HOME = "CLEAR_HOME"
 
+//Hago los pedidos necesarios a las rutas del back
+
+
 export function getProductsDefult () {
     return async function(dispatch){
         try{
@@ -16,9 +19,9 @@ export function getProductsDefult () {
         }
         catch(error){
             return error
-        }
-    }
-}
+        };
+    };
+};
 
 export function getProductsBySearch(search){
     return async function(dispatch){
@@ -32,9 +35,9 @@ export function getProductsBySearch(search){
         }
         catch(error){
             return error
-        }
-    }
-}
+        };
+    };
+};
 
 export function getProductDetails(id){
 
@@ -48,14 +51,6 @@ export function getProductDetails(id){
         }
         catch(error){
             return error
-        }
-    }
-}
-
-export function clear (){
-    return {type: CLEAR }
-
-}
-export function clearHome () {
-    return {type : CLEAR_HOME}
-}
+        };
+    };
+};

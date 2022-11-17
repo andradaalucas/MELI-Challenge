@@ -1,13 +1,16 @@
 .renderCategories{
     text-align: center;
-    margin: 5px 0 5px 0;
+    margin: var(--marginRenderCategory);
 }
 .containerCategory{
     display: inline;
 }
 .category{
-    margin: 0 0 0 15px;
+    margin: var(--marginCategory);
     font-family: var(--proximaNovaMedium);
     font-weight: var(--weightNormal);
     font-size: var(--categorySize);
+}
+.category::selection{
+    background-color: var(--selectColor);
 }

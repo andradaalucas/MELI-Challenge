@@ -17,7 +17,6 @@
     for (var i = 0; i <= nums.length-1; i++) {
         res += nums[i]; //Se crea la nueva cadena para devolver el valor formateado
     }
-
     return res;
 }
 

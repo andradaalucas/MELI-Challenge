@@ -1,30 +1,38 @@
+/* Estilos NavBar */
+
 .bodyNavBar{
     background: var(--primaryColor);
     display: flex;
     justify-content: center;
     padding: 20px;
+    user-select: none
 }
-.container{
+.containerNavBar{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .form{
     display: flex;
-    margin: 0 80px;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    margin: var(--marginForm);
+    box-shadow: var(--boxShadowNavBar);
 }
+
 .inputForm{
-    padding: 13px 130px;
+    padding: var(--inputNavSize);
     border: none;
     border-radius:  2px;
     font-size: var(--textInput);
     font-family: var(--proximaNovaLight);
 }
-button{
+
+.buttonSubmit{
     border: none;
     border-left: 1px solid #ededed;
+    cursor: pointer;
 }
+
 input::placeholder{
     font-size: var(--titleNavBar);
     font-family: var(--proximaNovaMedium);

@@ -1,12 +1,13 @@
-import {GET_PRODUCTS_DEFAULT, GET_PRODUCT_BY_SEARCH, GET_PRODUCT_DETAILS, CLEAR, CLEAR_HOME} from '../action';
+import {GET_PRODUCTS_DEFAULT, GET_PRODUCT_BY_SEARCH, GET_PRODUCT_DETAILS} from '../action';
 
+//Inicio los estados que voy a usar 
 const initialState = {
     productsDefault : [],
     productsSearch :[],
     productDetail : {},
 };
 
-
+//Seteo los estados con la informacion que voy usar en cada caso
 function rootReducer (state = initialState, action) {
     switch (action.type) {
 
@@ -24,17 +25,7 @@ function rootReducer (state = initialState, action) {
             return{
                 ...state,
                 productDetail: action.payload
-            }    
-        case CLEAR :
-            return{
-                ...state,
-                productDetail: {}
-            }
-        case CLEAR_HOME :
-            return {
-                ...state,
-                productsDefault: []
-            }
+            };    
         default:
             return state;
     }};

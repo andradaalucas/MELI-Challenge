@@ -1,28 +1,39 @@
-
+/* Estilos de card */
 .card{
     background-color: var(--cardColor);
-    border-radius: 5px;
+    border-radius: var(--borderRadiusCard);
     display: -webkit-flex;
-    height: 200px;
+    height: var(--heightCard);
     width: var(--widthCard);
     margin: var(--marginCard);
     padding: var(--paddingCard);
     transition: transform .2s;
-
 }
 .card:hover{
     transition: 0.4s;
     transform: scale(1.02)
 }
 .picture{
-    height: 130px;
-    width: 130px;
+    height: var(--heightPictureCard);
+    width: var(--widthPictureCard);
 }
+.picture::selection{
+    background-color: var(--selectColor);
+}
+
+.containerItems{
+    padding-left: 20px;
+}
+
 .titleCard{
     color : var(--blackColor);
     font-family: var(--proximaNovaLight);
     font-weight: var(--weightSuperLight);
 }
+.titleCard::selection{
+    background-color: var(--selectColor);
+}
+
 .priceCard{
     color : var(--blackColor);
     font-family: var(--proximaNovaLight);
@@ -30,15 +41,20 @@
     font-size: var(--priceCard);
     display: block;
 }
+.priceCard::selection{
+    background-color: var(--selectColor);
+}
 .condition{
     color: var(--conditionNewColor);
     font-size: var(--conditionSize);
     font-family: var(--proximaNovaLight);
     font-weight: var(--proximaNovaMedium);
 }
+
+.condition::selection{
+    background-color: var(--selectColor);
+}
+
 .link{
     text-decoration: none;
-}
-.containerItems{
-    padding-left: 20px;
 }

@@ -1,23 +1,21 @@
 import React,{useEffect} from 'react';
-import DetailsStyle from './Details.module.css'
-import {getProductDetails} from "../../redux/action";
-import {useDispatch, useSelector} from "react-redux";
-import {useParams} from "react-router-dom";
+import DetailsStyle from './Details.module.css';
+import {getProductDetails} from '../../redux/action';
+import {useDispatch, useSelector} from 'react-redux';
+import {useParams} from 'react-router-dom';
 import NavBar from '../navBar/NavBar';
 
 function Details() {
-  const {id} = useParams()
-  const dispatch = useDispatch()
+  const {id} = useParams();
+  const dispatch = useDispatch();
 
   useEffect(()=>{
+  //Despacho la funcion getProductDetails con el id capturado
     dispatch(getProductDetails(id))
-    // return () => {
-    //   dispatch(clear())
-    // }
-  },[dispatch,id])
+  },[dispatch,id]);
 
-
-  const productUnique = useSelector((state) => state.productDetail)
+  //Me guardo el estado productDetail en una variable
+  const productUnique = useSelector((state) => state.productDetail);
 
   return (
     <>
@@ -25,6 +23,7 @@ function Details() {
       productUnique?
     
     (<div>
+      {/* Renderizo componente nav */}
       <NavBar/>
       <div className={DetailsStyle.renderCategory}>
         {
@@ -33,14 +32,17 @@ function Details() {
               <span className={DetailsStyle.category}>{category}</span>
             </div>
           ) )
-        }
+        };
+      
       </div>
-      <div className={DetailsStyle.container}>
+      {/* Renderizo todos los detalles que se van a mostrar */}
+      <div className={DetailsStyle.containerProduct}>
         <div>
           <img src={productUnique.item?.picture[0]} alt="imagen del producto" />
         </div>
         <div>
           <h2 className={DetailsStyle.titleDetail}>{productUnique.item?.title}</h2>
+          <span className={DetailsStyle.condition}>{productUnique.item?.condition === "new" ? "Nuevo" : false }</span>
           <h5 className={DetailsStyle.priceDetail}>${productUnique.item?.price.amount}</h5>
           <div className={DetailsStyle.containerButtons}>
           <button className={DetailsStyle.buttonBuy}>Comprar</button>
@@ -53,10 +55,11 @@ function Details() {
         <p  className={DetailsStyle.descriptionText}>{productUnique.item?.description}</p>
         </div>
     </div>)
-      : (<h1>Cargando...</h1>)
-  }
+    // En caso de que no este disponible el estado productUnique se tendria que mostrar este mensaje
+      : (<p>Espera...</p>)
+  };
   </>
-  )
-}
+  );
+};
 
-export default Details
+export default Details;

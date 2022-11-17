@@ -9,9 +9,11 @@
   --buttonSecundaryColor : #e3edfb;
   --buttonSecundaryTextColor : #619efa;
   --buttonSecundaryHoverColor: #d9e7fa;
-
+  --selectColor : rgb(227, 225, 225);
   --conditionNewColor : #00a650;
   --blackColor: black;
+  --backgroundDetailColor : white;
+  --descriptionTitleColor: rgba(60, 60, 60, 0.9);
   --descriptionTextColor: #666;
   /* Font size */
   --titleCard : 20px;
@@ -37,9 +39,20 @@
   --proximaNovaRegular : proximaNovaRegular;
   --proximaNovaThinit : proximaNovaThinit;
   /* Size  */
+  --marginForm : 0 80px; 
+  --inputNavSize : 13px 130px;
   --widthCard : 900px;
   --marginCard : 0 0 15px 350px ;
   --paddingCard : 20px 50px 20px 20px;
+  --marginRenderCategory :  5px 0 5px 0;
+  --marginCategory: 0 0 0 15px;
+  --borderRadiusCard : 5px;
+  --heightCard: 200px;
+  --heightPictureCard : 130px;
+  --widthPictureCard : 130px;
+  /* Shadows */
+  --boxShadowNavBar : 0 1px 2px 0 rgb(0 0 0 / 20%)
+
 };
 @font-face {
   font-family: proximaNovaMedium ;
@@ -52,6 +65,8 @@
   src: url("./assets/Fontspring-DEMO-proximanovacond-thinit.otf");
 };
 
-
+*::selection{
+  background-color: red;
+}
 
 

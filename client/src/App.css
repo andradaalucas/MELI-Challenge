@@ -4,7 +4,12 @@
   --backgroundColor: #dfdfdf;
   --cardColor: #ffffff;
   --buttonColor: #3483fa;
+  --buttonTextColor : #f0f6ff;
   --buttonHoverColor: #2968c8;
+  --buttonSecundaryColor : #e3edfb;
+  --buttonSecundaryTextColor : #619efa;
+  --buttonSecundaryHoverColor: #d9e7fa;
+
   --conditionNewColor : #00a650;
   --blackColor: black;
   --descriptionTextColor: #666;
@@ -19,6 +24,7 @@
   --textDetail : 20px;
   --textInput : 15px;
   --categorySize : 15px;
+  --buttonSize : 13px;
   /* Font weight */
   --weightDetail: 500;
   --weightCard : 300;

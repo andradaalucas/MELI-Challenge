@@ -2,7 +2,7 @@ require('dotenv').config();
 const axios = require('axios');
 //Guardo informacion sensible en un archivo .env
 const {GET_ALL_ITEMS, GET_ITEM_BY_ID, GET_CATEGORIES, GET_ITEM_BY_SEARCH} = process.env;
-
+const { separador } = require("./auxiliar.js")
 const author = {
     name: "Lucas",
     lastname: "Andrada"
@@ -36,7 +36,7 @@ const getItemById = async (id) =>{
             title: responseItem.title,
             price: {
                 currency : responseItem.currency_id,
-                amount : responseItem.price,
+                amount : separador(responseItem.price),
                 decimals : ""
             },
             picture : responseItem.pictures.map(el => el.url),
@@ -47,6 +47,9 @@ const getItemById = async (id) =>{
         }
     };
 };
+
+
+
 
 
 
@@ -62,7 +65,7 @@ const getAllItems = async (name)  =>{
                 title : el.title,
                 price : {
                     currency : el.prices.prices[0].currency_id,
-                    amount : el.prices.prices[0].amount,
+                    amount : separador(el.prices.prices[0].amount),
                     decimals : ""
                 },
                 picture: el.thumbnail,
@@ -86,7 +89,7 @@ const getAllItems = async (name)  =>{
             title: el.title,
             price: {
                 currency: el.prices.prices[0].currency_id,
-                amount: el.prices.prices[0].amount,
+                amount: separador(el.prices.prices[0].amount),
                 decimals:"", 
             },
             picture: el.thumbnail,

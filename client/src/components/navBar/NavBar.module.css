@@ -1,5 +1,5 @@
-.body{
-    background-color: var(--primaryColor);
+.bodyNavBar{
+    background: var(--primaryColor);
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -19,6 +19,7 @@
     border: none;
     border-radius:  2px;
     font-size: var(--textInput);
+    font-family: var(--proximaNovaLight);
 }
 button{
     border: none;
@@ -26,4 +27,5 @@ button{
 }
 input::placeholder{
     font-size: var(--titleNavBar);
+    font-family: var(--proximaNovaMedium);
 }

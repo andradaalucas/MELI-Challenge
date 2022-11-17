@@ -24,9 +24,13 @@ const getItemById = async (id) =>{
     //Guardo las respuestas de los pedidos
     const responseItem = getItemDetails.data;
     const responseDescription = getItemDescription.data;
+    //Conseguimos la categoria por id
+    const categoryById = getItemDetails.data.category_id;
+    const responseCategory = await getItemCategories(categoryById);
     //Retorno la informacion
     return{
         author,
+        category: responseCategory,
         item :{
             id : responseItem.id,
             title: responseItem.title,
@@ -67,8 +71,8 @@ const getAllItems = async (name)  =>{
             };
         });
         //El producto que este en la primera posicion va a contener las categorias de la busqueda
-        const id = getItemBySearch.data.results[0].category_id;
-        const responseCategory = await getItemCategories(id);
+        const idName = getItemBySearch.data.results[0].category_id;
+        const responseCategory = await getItemCategories(idName);
         return {
             author,
             category: responseCategory,
@@ -90,8 +94,11 @@ const getAllItems = async (name)  =>{
             free_shipping: el.shipping.free_shipping
         };
     });
+    const idItemDefault = getItems.data.results[0].category_id;
+    const responseCategoryDefault = await getItemCategories(idItemDefault);
     return allItems = {
         author,
+        categories : responseCategoryDefault,
         items: responseItems
     };
 };

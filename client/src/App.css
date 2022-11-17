@@ -1,31 +1,51 @@
-:root{
+:root {
   /* Colors */
   --primaryColor: #fff159;
-  --backgroundColor: #ededed;
+  --backgroundColor: #dfdfdf;
   --cardColor: #ffffff;
   --buttonColor: #3483fa;
   --buttonHoverColor: #2968c8;
+  --conditionNewColor : #00a650;
+  --blackColor: black;
+  --descriptionTextColor: #666;
   /* Font size */
   --titleCard : 20px;
   --titleNavBar : 13px;
   --priceCard : 24px;
+  --conditionSize: 14px;
   --titleDetail : 22px;
   --priceDetail : 36px;
-  --descriptionDetail: 24px;
+  --descriptionDetail: 25px;
   --textDetail : 20px;
   --textInput : 15px;
+  --categorySize : 15px;
   /* Font weight */
-  --weightDetail: 600;
+  --weightDetail: 500;
   --weightCard : 300;
   --weightPrice :400;
+  --weightSuperLight: 200;
+  --weightNormal: 400;
   /* Font Family */
-  --proximaNova : 
-}
+  --proximaNovaMedium : proximaNovaMedium ;
+  --proximaNovaLight : proximaNovaLight;
+  --proximaNovaRegular : proximaNovaRegular;
+  --proximaNovaThinit : proximaNovaThinit;
+  /* Size  */
+  --widthCard : 900px;
+  --marginCard : 0 0 15px 350px ;
+  --paddingCard : 20px 50px 20px 20px;
+};
+@font-face {
+  font-family: proximaNovaMedium ;
+  src: url("./assets/Fontspring-DEMO-proximanova-medium.otf");
+  font-family: proximaNovaLight;
+  src: url("./assets/Fontspring-DEMO-proximanova-light.otf");
+  font-family: proximaNovaRegular;
+  src: url("./assets/Fontspring-DEMO-proximanovacond-regularit.otf");
+  font-family: proximaNovaThinit;
+  src: url("./assets/Fontspring-DEMO-proximanovacond-thinit.otf");
+};
 
-
-.App {
-  text-align: center;
-}
 
 
 

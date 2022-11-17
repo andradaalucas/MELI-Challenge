@@ -1,0 +1,20 @@
+.titleDetail{
+    font-family: var(--proximaNovaMedium);
+    font-size: var(--titleDetail);
+}
+.priceDetail{
+    font-family: var(--proximaNovaMedium);
+    font-size: var(--priceDetail);
+}
+.description{
+    font-family: var(--proximaNovaMedium);
+    font-size: var(--descriptionDetail);
+    font-weight: var(--weightDetail);
+    color: rgba(60, 60, 60, 0.9);
+}
+.descriptionText{
+    font-family: var(--proximaNovaMedium);
+    font-weight: var(--weightSuperLight);
+    font-size: var(--textDetail);
+    color : var(--descriptionTextColor); 
+}

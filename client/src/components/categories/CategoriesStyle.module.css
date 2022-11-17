@@ -1,0 +1,13 @@
+.containerCategory{
+    display: inline;
+}
+.category{
+
+    margin-left: 15px;
+    font-family: var(--proximaNovaMedium);
+    font-weight: var(--weightNormal);
+    font-size: var(--categorySize);
+}
+.renderCategories{
+    text-align: center;
+}

@@ -1,42 +1,43 @@
-import React,{useState, useEffect} from 'react';
-import HomeStyle from './Home.module.css';
+import React,{ useEffect} from 'react';
 import NavBar from '../navBar/NavBar';
 import Card from '../card/Card'
-import axios from "axios";
 import Banner from '../banner/Banner';
+import Categories from '../categories/Categories';
+import {getProductsDefult, clearHome} from '../../redux/action';
+import {useDispatch, useSelector} from 'react-redux';
+import HomeStyle from './Home.module.css'
 
 
-
-
-
-const initialUrl = 'http://localhost:3001/api/items'
 
 
 
 function Home() {
-  const[products, setProducts] = useState([]);
-
-
-  const allProducts = async (initialUrl) => {
-    await axios.get(initialUrl)
-    .then(response => response.data.items)
-    .then(data =>setProducts(data))
-    .catch(error => console.log(error))
-  }
-
+  const dispatch = useDispatch()
+  const productsDefault = useSelector((state) => state.productsDefault)
   useEffect(() => {
-    allProducts(initialUrl)
-  }, [])
+    dispatch(getProductsDefult())
+    return () =>{
+      dispatch(clearHome())
+    }
+  }, [dispatch])
   
 
-
+  
 
   return (
-  <>
+  <>{
+    productsDefault?
+
+    (<>
     <NavBar/>
     <Banner/>
-    <Card products={products}/>
-  </>)
+    <Categories categories={productsDefault.categories}/>
+    <Card products={productsDefault.items}/>
+    </>)
+    :
+    (<p>cargando</p>)
+  }   
+</>)
   
 }
 

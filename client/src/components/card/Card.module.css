@@ -1,0 +1,41 @@
+
+.card{
+    background-color: var(--cardColor);
+    border-radius: 5px;
+    display: flex;
+    display: -webkit-flex;
+    height: 200px;
+    width: var(--widthCard);
+    margin: var(--marginCard);
+    box-sizing: border-box;
+    padding: var(--paddingCard);
+    
+}
+.picture{
+    height: 150px;
+    width: 150px;
+}
+.titleCard{
+    color : var(--blackColor);
+    font-family: var(--proximaNovaLight);
+    font-weight: var(--weightSuperLight);
+}
+.priceCard{
+    color : var(--blackColor);
+    font-family: var(--proximaNovaLight);
+    font-weight: var(--proximaNovaMedium);
+    font-size: var(--priceCard);
+    display: block;
+}
+.condition{
+    color: var(--conditionNewColor);
+    font-size: var(--conditionSize);
+    font-family: var(--proximaNovaLight);
+    font-weight: var(--proximaNovaMedium);
+}
+.link{
+    text-decoration: none;
+}
+.containerItems{
+    padding-left: 20px;
+}

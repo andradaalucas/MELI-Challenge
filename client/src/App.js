@@ -1,6 +1,7 @@
 import './App.css';
-import axios from "axios";
+
 import Home from './components/home/Home'
+import Details from './components/details/Details'
 import {BrowserRouter, Route, Switch } from "react-router-dom" 
 
 
@@ -9,7 +10,8 @@ function App() {
     <BrowserRouter>
       <div className="App">
       <Switch>
-        <Route path="/home" component={Home}/>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/details/:id" component={Details} />
       </Switch>
       </div>
     </BrowserRouter>

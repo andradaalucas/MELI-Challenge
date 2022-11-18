@@ -5,11 +5,10 @@ import {Link} from 'react-router-dom'
 
 function Card({products = []}) {
   // Utilizo el metodo slice simplemente para no mostrar 50 cartas y mostrar solo 20
-  const productsSlice = products.slice(0, 20)
   return (
     <div>
       {/* Mapeo para obtener las propiedades del arreglo */}
-      {productsSlice.map((item ,index) => (
+      {products.map((item ,index) => (
         <div className={CardStyle.container} key={index}>
             <Link to={`/details/${item.id}`} className={CardStyle.link}>
           <div className={CardStyle.card} >

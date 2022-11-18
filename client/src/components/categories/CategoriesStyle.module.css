@@ -7,9 +7,13 @@
 }
 .category{
     margin: var(--marginCategory);
+    padding: 5px 10px;
+    border-radius: var(--borderRadiusCard);
     font-family: var(--proximaNovaMedium);
     font-weight: var(--weightNormal);
     font-size: var(--categorySize);
+    border: none;
+    cursor: pointer;
 }
 .category::selection{
     background-color: var(--selectColor);

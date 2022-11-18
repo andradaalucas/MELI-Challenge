@@ -15,7 +15,6 @@ function Home() {
 
   //Guardo el estado en una variable para despues pasar el estado por props a los componentes
   const productsDefault = useSelector((state) => state.productsDefault);
-
   //Cuando se monta el componente despacho la funcion para traerme los productos
   useEffect(() => {
     dispatch(getProductsDefult())

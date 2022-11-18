@@ -60,7 +60,7 @@ const getItemById = async (id) =>{
 const getAllItems = async (name)  =>{
     if(name){
         let nameQuery = name.split(" ").join("%20")
-        const getItemBySearch = await axios.get(`${GET_ITEM_BY_SEARCH}${nameQuery}`);
+        const getItemBySearch = await axios.get(`${GET_ITEM_BY_SEARCH}${nameQuery}&limit=4`);
         const responseItemBySearch =  getItemBySearch.data.results.map(el => {
             return{
                 id : el.id,
@@ -80,7 +80,7 @@ const getAllItems = async (name)  =>{
         const responseCategory = await getItemCategories(idName);
         return {
             author,
-            category: responseCategory,
+            categories: responseCategory,
             items : responseItemBySearch,
         };
     };

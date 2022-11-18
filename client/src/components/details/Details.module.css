@@ -31,6 +31,10 @@
     background-color: var(--backgroundDetailColor);
 }
 
+.picture::selection{
+    background-color: var(--selectColor);
+}
+
 .titleDetail{
     font-family: var(--proximaNovaMedium);
     font-size: var(--titleDetail);
@@ -71,7 +75,7 @@
     background-color: var(--buttonColor);
     font-size: var(--buttonSize);
     font-family: var(--proximaNovaLight);
-    border-radius: 5px;
+    border-radius: var(--borderRadiusCard);
     padding: 15px 0;
     border: none;
     cursor: pointer;

@@ -4,6 +4,7 @@ import {getProductDetails} from '../../redux/action';
 import {useDispatch, useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import NavBar from '../navBar/NavBar';
+import Categories from '../categories/Categories';
 
 function Details() {
   const {id} = useParams();
@@ -26,19 +27,13 @@ function Details() {
       {/* Renderizo componente nav */}
       <NavBar/>
       <div className={DetailsStyle.renderCategory}>
-        {
-          productUnique.category?.map( (category, index) => (
-            <div key={index} className={DetailsStyle.containerCategory}>
-              <span className={DetailsStyle.category}>{category}</span>
-            </div>
-          ) )
-        };
+      <Categories categories={productUnique.category}/>
       
       </div>
       {/* Renderizo todos los detalles que se van a mostrar */}
       <div className={DetailsStyle.containerProduct}>
         <div>
-          <img src={productUnique.item?.picture[0]} alt="imagen del producto" />
+          <img className={DetailsStyle.picture} src={productUnique.item?.picture[0]} alt="imagen del producto" />
         </div>
         <div>
           <h2 className={DetailsStyle.titleDetail}>{productUnique.item?.title}</h2>

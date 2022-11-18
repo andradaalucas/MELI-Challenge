@@ -27,7 +27,6 @@ export function getProductsBySearch(search){
     return async function(dispatch){
         try{
             const productsBySearch = await axios.get(`${process.env.REACT_APP_GET_ITEMS_BY_SEARCH}${search}`)
-            console.log(productsBySearch)
             return dispatch({
                 type : GET_PRODUCT_BY_SEARCH,
                 payload : productsBySearch.data

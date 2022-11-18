@@ -26,13 +26,13 @@ router.get("/api/items", async(req,res) =>{
 });
 
 
-router.get("/api/item/:id", async (req, res) =>{
+router.get("/api/items/:id", async (req, res) =>{
     const id = req.params.id;
     const itemsById = await getItemById(id);
     try{
         res.status(200).send(itemsById);
     }
-    catch(e){
+    catch(error){
         res.status(400).send(`Este es el error en la ruta por id: ${error.message}`);
     }
 });

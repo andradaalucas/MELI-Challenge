@@ -118,6 +118,7 @@
     font-size: var(--descriptionDetail);
     font-weight: var(--weightDetail);
     color: var(--descriptionTitleColor);
+    padding: var(--paddingDescriptionDetails);
 }
 
 .description::selection{
@@ -129,6 +130,7 @@
     font-weight: var(--weightSuperLight);
     font-size: var(--textDetail);
     color : var(--descriptionTextColor); 
+    padding: var(--paddingDescriptionDetails);
 }
 
 .descriptionText::selection{

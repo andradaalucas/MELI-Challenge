@@ -50,6 +50,7 @@
   --heightCard: 200px;
   --heightPictureCard : 130px;
   --widthPictureCard : 130px;
+  --paddingDescriptionDetails: 0 20px;
   /* Shadows */
   --boxShadowNavBar : 0 1px 2px 0 rgb(0 0 0 / 20%)
 

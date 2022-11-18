@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom'
 
 
 function Card({products = []}) {
-  // Utilizo el metodo slice simplemente para no mostrar 50 cartas y mostrar solo 20
+
+  
   return (
     <div>
       {/* Mapeo para obtener las propiedades del arreglo */}

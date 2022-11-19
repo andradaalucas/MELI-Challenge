@@ -13,4 +13,4 @@ El proyecto principal consta de 4 componentes (NavBar, Detalles, Home y breadcru
 ![Home Image](https://user-images.githubusercontent.com/95535628/202864461-37cc4f6c-c87d-4ecb-9ad3-f90923ade8f4.jpg)
 
 #### Vista detalles
-![Details Image](https://user-images.githubusercontent.com/95535628/202865123-d60760e8-6056-4bf7-86fb-4f1563969a15.jpg)
+![Details Image](https://user-images.githubusercontent.com/95535628/202865563-00dfeae8-b1fb-4b57-b2d7-e4219d1583ce.jpg)

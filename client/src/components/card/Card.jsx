@@ -11,6 +11,7 @@ function Card({products = []}) {
       {/* Mapeo para obtener las propiedades del arreglo */}
       {products.map((item ,index) => (
         <div className={CardStyle.container} key={index}>
+          <div>
             <Link to={`/details/${item.id}`} className={CardStyle.link}>
           <div className={CardStyle.card} >
             <div className={CardStyle.img}>
@@ -23,6 +24,7 @@ function Card({products = []}) {
             </div>
           </div>
             </Link>
+            </div>
         </div>
       ))
       }

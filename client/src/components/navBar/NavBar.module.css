@@ -1,39 +1,39 @@
 /* Estilos NavBar */
 
-.bodyNavBar{
-    background: var(--primaryColor);
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    user-select: none
+.bodyNavBar {
+  background: var(--primaryColor);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  user-select: none;
 }
-.containerNavBar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.form{
-    display: flex;
-    margin: var(--marginForm);
-    box-shadow: var(--boxShadowNavBar);
+.containerNavBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.inputForm{
-    padding: var(--inputNavSize);
-    border: none;
-    border-radius:  2px;
-    font-size: var(--textInput);
-    font-family: var(--proximaNovaLight);
+.form {
+  display: flex;
+  margin: var(--marginForm);
+  box-shadow: var(--boxShadowNavBar);
 }
 
-.buttonSubmit{
-    border: none;
-    border-left: 1px solid #ededed;
-    cursor: pointer;
+.inputForm {
+  padding: var(--inputNavSize);
+  border: none;
+  border-radius: 2px;
+  font-size: var(--textInput);
+  font-family: var(--proximaNovaLight);
 }
 
-input::placeholder{
-    font-size: var(--titleNavBar);
-    font-family: var(--proximaNovaMedium);
+.buttonSubmit {
+  border: none;
+  border-left: 1px solid #ededed;
+  cursor: pointer;
+}
+
+input::placeholder {
+  font-size: var(--titleNavBar);
+  font-family: var(--proximaNovaMedium);
 }

@@ -4,59 +4,58 @@
   --backgroundColor: #dfdfdf;
   --cardColor: #ffffff;
   --buttonColor: #3483fa;
-  --buttonTextColor : #f0f6ff;
+  --buttonTextColor: #f0f6ff;
   --buttonHoverColor: #2968c8;
-  --buttonSecundaryColor : #e3edfb;
-  --buttonSecundaryTextColor : #619efa;
+  --buttonSecundaryColor: #e3edfb;
+  --buttonSecundaryTextColor: #619efa;
   --buttonSecundaryHoverColor: #d9e7fa;
-  --selectColor : rgb(227, 225, 225);
-  --conditionNewColor : #00a650;
+  --selectColor: rgb(227, 225, 225);
+  --conditionNewColor: #00a650;
   --blackColor: black;
-  --backgroundDetailColor : white;
+  --backgroundDetailColor: white;
   --descriptionTitleColor: rgba(60, 60, 60, 0.9);
   --descriptionTextColor: #666;
   /* Font size */
-  --titleCard : 20px;
-  --titleNavBar : 13px;
-  --priceCard : 24px;
+  --titleCard: 20px;
+  --titleNavBar: 13px;
+  --priceCard: 24px;
   --conditionSize: 14px;
-  --titleDetail : 22px;
-  --priceDetail : 36px;
+  --titleDetail: 22px;
+  --priceDetail: 36px;
   --descriptionDetail: 25px;
-  --textDetail : 20px;
-  --textInput : 15px;
-  --categorySize : 15px;
-  --buttonSize : 13px;
+  --textDetail: 20px;
+  --textInput: 15px;
+  --categorySize: 15px;
+  --buttonSize: 13px;
   /* Font weight */
   --weightDetail: 500;
-  --weightCard : 300;
-  --weightPrice :400;
+  --weightCard: 300;
+  --weightPrice: 400;
   --weightSuperLight: 200;
   --weightNormal: 400;
   /* Font Family */
-  --proximaNovaMedium : proximaNovaMedium ;
-  --proximaNovaLight : proximaNovaLight;
-  --proximaNovaRegular : proximaNovaRegular;
-  --proximaNovaThinit : proximaNovaThinit;
+  --proximaNovaMedium: proximaNovaMedium;
+  --proximaNovaLight: proximaNovaLight;
+  --proximaNovaRegular: proximaNovaRegular;
+  --proximaNovaThinit: proximaNovaThinit;
   /* Size  */
-  --marginForm : 0 80px; 
-  --inputNavSize : 13px 130px;
-  --widthCard : 900px;
-  --marginCard : 0 0 15px 350px ;
-  --paddingCard : 20px 50px 20px 20px;
-  --marginRenderCategory :  5px 0 5px 0;
+  --marginForm: 0 80px;
+  --inputNavSize: 13px 130px;
+  --widthCard: 900px;
+  --marginCard: 0 0 15px 350px;
+  --paddingCard: 20px 50px 20px 20px;
+  --marginRenderCategory: 5px 0 5px 0;
   --marginCategory: 0 0 0 15px;
-  --borderRadiusCard : 5px;
+  --borderRadiusCard: 5px;
   --heightCard: 200px;
-  --heightPictureCard : 130px;
-  --widthPictureCard : 130px;
+  --heightPictureCard: 130px;
+  --widthPictureCard: 130px;
   --paddingDescriptionDetails: 0 20px;
   /* Shadows */
-  --boxShadowNavBar : 0 1px 2px 0 rgb(0 0 0 / 20%)
-
-};
+  --boxShadowNavBar: 0 1px 2px 0 rgb(0 0 0 / 20%);
+}
 @font-face {
-  font-family: proximaNovaMedium ;
+  font-family: proximaNovaMedium;
   src: url("./assets/Fontspring-DEMO-proximanova-medium.otf");
   font-family: proximaNovaLight;
   src: url("./assets/Fontspring-DEMO-proximanova-light.otf");
@@ -64,10 +63,5 @@
   src: url("./assets/Fontspring-DEMO-proximanovacond-regularit.otf");
   font-family: proximaNovaThinit;
   src: url("./assets/Fontspring-DEMO-proximanovacond-thinit.otf");
-};
-
-*::selection{
-  background-color: red;
 }
-
 

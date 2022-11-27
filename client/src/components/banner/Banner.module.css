@@ -1,7 +1,7 @@
-.bannerImg{
-    max-width: 100%;
-    height: auto;
+.bannerImg {
+  max-width: 100%;
+  height: auto;
 }
-.bannerImg::selection{
-    background-color: var(--selectColor);
+.bannerImg::selection {
+  background-color: var(--selectColor);
 }

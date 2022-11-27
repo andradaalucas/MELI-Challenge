@@ -1,63 +1,63 @@
 /* Estilos de card */
-.card{
-    background-color: var(--cardColor);
-    border-radius: var(--borderRadiusCard);
-    display: -webkit-flex;
-    height: var(--heightCard);
-    width: var(--widthCard);
-    margin: var(--marginCard);
-    padding: var(--paddingCard);
-    transition: transform .2s;
+.card {
+  background-color: var(--cardColor);
+  border-radius: var(--borderRadiusCard);
+  display: -webkit-flex;
+  height: var(--heightCard);
+  width: var(--widthCard);
+  margin: var(--marginCard);
+  padding: var(--paddingCard);
+  transition: transform 0.2s;
 }
-.card:hover{
-    transition: 0.4s;
-    transform: scale(1.02)
+.card:hover {
+  transition: 0.4s;
+  transform: scale(1.02);
 }
-.picture{
-    height: var(--heightPictureCard);
-    width: var(--widthPictureCard);
+.picture {
+  height: var(--heightPictureCard);
+  width: var(--widthPictureCard);
 }
-.picture::selection{
-    background-color: var(--selectColor);
-}
-
-.containerItems{
-    padding-left: 20px;
+.picture::selection {
+  background-color: var(--selectColor);
 }
 
-.titleCard{
-    color : var(--blackColor);
-    font-family: var(--proximaNovaLight);
-    font-weight: var(--weightSuperLight);
-}
-.titleCard::selection{
-    background-color: var(--selectColor);
+.containerItems {
+  padding-left: 20px;
 }
 
-.priceCard{
-    color : var(--blackColor);
-    font-family: var(--proximaNovaLight);
-    font-weight: var(--proximaNovaMedium);
-    font-size: var(--priceCard);
-    display: block;
+.titleCard {
+  color: var(--blackColor);
+  font-family: var(--proximaNovaLight);
+  font-weight: var(--weightSuperLight);
 }
-.priceCard::selection{
-    background-color: var(--selectColor);
-}
-.condition{
-    color: var(--conditionNewColor);
-    font-size: var(--conditionSize);
-    font-family: var(--proximaNovaLight);
-    font-weight: var(--proximaNovaMedium);
+.titleCard::selection {
+  background-color: var(--selectColor);
 }
 
-.condition::selection{
-    background-color: var(--selectColor);
+.priceCard {
+  color: var(--blackColor);
+  font-family: var(--proximaNovaLight);
+  font-weight: var(--proximaNovaMedium);
+  font-size: var(--priceCard);
+  display: block;
+}
+.priceCard::selection {
+  background-color: var(--selectColor);
+}
+.condition {
+  color: var(--conditionNewColor);
+  font-size: var(--conditionSize);
+  font-family: var(--proximaNovaLight);
+  font-weight: var(--proximaNovaMedium);
 }
 
-.link{
-    text-decoration: none;
+.condition::selection {
+  background-color: var(--selectColor);
 }
-.link:hover{
-    display: flex;
+
+.link {
+  text-decoration: none;
+}
+.link:hover {
+  display: flex;
 }

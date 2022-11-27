@@ -1,138 +1,136 @@
 /* Estilos de categoria */
 
-.renderCategory{
-    text-align: center;
-    margin-top: 15px;
+.renderCategory {
+  text-align: center;
+  margin-top: 15px;
 }
 
-.containerCategory{
-    display: inline;
+.containerCategory {
+  display: inline;
 }
 
-.category{
-    margin: var(--marginCategory);
-    font-family: var(--proximaNovaMedium);
-    font-weight: var(--weightNormal);
-    font-size: var(--categorySize);
+.category {
+  margin: var(--marginCategory);
+  font-family: var(--proximaNovaMedium);
+  font-weight: var(--weightNormal);
+  font-size: var(--categorySize);
 }
 
-.category::selection{
-    background-color: var(--selectColor);
+.category::selection {
+  background-color: var(--selectColor);
 }
-
 
 /* Estilos del producto */
-.containerProduct{
-    margin: 30px;
-    padding: 15px;
-    border-radius: 15px;
-    display : flex;
-    justify-content: space-around;
-    background-color: var(--backgroundDetailColor);
+.containerProduct {
+  margin: 30px;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--backgroundDetailColor);
 }
 
-.picture::selection{
-    background-color: var(--selectColor);
+.picture::selection {
+  background-color: var(--selectColor);
 }
 
-.titleDetail{
-    font-family: var(--proximaNovaMedium);
-    font-size: var(--titleDetail);
+.titleDetail {
+  font-family: var(--proximaNovaMedium);
+  font-size: var(--titleDetail);
 }
 
-.titleDetail::selection{   
-    background-color: var(--selectColor);
+.titleDetail::selection {
+  background-color: var(--selectColor);
 }
 
-.condition{
-    color: var(--conditionNewColor);
-    font-size: var(--conditionSize);
-    font-family: var(--proximaNovaLight);
-    font-weight: var(--proximaNovaMedium);
+.condition {
+  color: var(--conditionNewColor);
+  font-size: var(--conditionSize);
+  font-family: var(--proximaNovaLight);
+  font-weight: var(--proximaNovaMedium);
 }
 
-.condition::selection{
-    background-color: var(--selectColor);
+.condition::selection {
+  background-color: var(--selectColor);
 }
 
-.priceDetail{
-    font-family: var(--proximaNovaMedium);
-    font-size: var(--priceDetail);
+.priceDetail {
+  font-family: var(--proximaNovaMedium);
+  font-size: var(--priceDetail);
 }
 
-.priceDetail::selection{
-    background-color: var(--selectColor);
+.priceDetail::selection {
+  background-color: var(--selectColor);
 }
 
-.containerButtons{
-    display: flex;
-    flex-direction: column;
+.containerButtons {
+  display: flex;
+  flex-direction: column;
 }
 
-.buttonBuy{
-    display: block;
-    color:var(--buttonTextColor);
-    background-color: var(--buttonColor);
-    font-size: var(--buttonSize);
-    font-family: var(--proximaNovaLight);
-    border-radius: var(--borderRadiusCard);
-    padding: 15px 0;
-    border: none;
-    cursor: pointer;
+.buttonBuy {
+  display: block;
+  color: var(--buttonTextColor);
+  background-color: var(--buttonColor);
+  font-size: var(--buttonSize);
+  font-family: var(--proximaNovaLight);
+  border-radius: var(--borderRadiusCard);
+  padding: 15px 0;
+  border: none;
+  cursor: pointer;
 }
 
-.buttonBuy:hover{
-    transition: 0.4s;
-    background-color: var(--buttonHoverColor);
+.buttonBuy:hover {
+  transition: 0.4s;
+  background-color: var(--buttonHoverColor);
 }
 
-.buttonSave{
-    background-color: var(--buttonSecundaryColor);
-    color : var(--buttonSecundaryTextColor);
-    font-size: var(--buttonSize);
-    font-family: var(--proximaNovaLight);
-    border-radius: 5px;
-    margin-top: 10px;
-    padding: 15px 0;
-    border: none;
-    cursor: pointer;
+.buttonSave {
+  background-color: var(--buttonSecundaryColor);
+  color: var(--buttonSecundaryTextColor);
+  font-size: var(--buttonSize);
+  font-family: var(--proximaNovaLight);
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 15px 0;
+  border: none;
+  cursor: pointer;
 }
 
-.buttonSave:hover{
-    transition: 0.4s;
-    background-color: var( --buttonSecundaryHoverColor);
+.buttonSave:hover {
+  transition: 0.4s;
+  background-color: var(--buttonSecundaryHoverColor);
 }
-
 
 /* Estilos de la descripcion */
 
-.containerDescription{
-    margin: 30px;
-    padding: 15px;
-    background-color: var(--backgroundDetailColor);
-    border-radius: 15px;
+.containerDescription {
+  margin: 30px;
+  padding: 15px;
+  background-color: var(--backgroundDetailColor);
+  border-radius: 15px;
 }
 
-.description{
-    font-family: var(--proximaNovaMedium);
-    font-size: var(--descriptionDetail);
-    font-weight: var(--weightDetail);
-    color: var(--descriptionTitleColor);
-    padding: var(--paddingDescriptionDetails);
+.description {
+  font-family: var(--proximaNovaMedium);
+  font-size: var(--descriptionDetail);
+  font-weight: var(--weightDetail);
+  color: var(--descriptionTitleColor);
+  padding: var(--paddingDescriptionDetails);
 }
 
-.description::selection{
-    background-color: var(--selectColor);
+.description::selection {
+  background-color: var(--selectColor);
 }
 
-.descriptionText{
-    font-family: var(--proximaNovaMedium);
-    font-weight: var(--weightSuperLight);
-    font-size: var(--textDetail);
-    color : var(--descriptionTextColor); 
-    padding: var(--paddingDescriptionDetails);
+.descriptionText {
+  font-family: var(--proximaNovaMedium);
+  font-weight: var(--weightSuperLight);
+  font-size: var(--textDetail);
+  color: var(--descriptionTextColor);
+  padding: var(--paddingDescriptionDetails);
 }
 
-.descriptionText::selection{
-    background-color: var(--selectColor);
+.descriptionText::selection {
+  background-color: var(--selectColor);
 }

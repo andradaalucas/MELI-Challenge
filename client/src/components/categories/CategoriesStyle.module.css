@@ -1,20 +1,20 @@
-.renderCategories{
-    text-align: center;
-    margin: var(--marginRenderCategory);
+.renderCategories {
+  text-align: center;
+  margin: var(--marginRenderCategory);
 }
-.containerCategory{
-    display: inline;
+.containerCategory {
+  display: inline;
 }
-.category{
-    margin: var(--marginCategory);
-    padding: 5px 10px;
-    border-radius: var(--borderRadiusCard);
-    font-family: var(--proximaNovaMedium);
-    font-weight: var(--weightNormal);
-    font-size: var(--categorySize);
-    border: none;
-    cursor: pointer;
+.category {
+  margin: var(--marginCategory);
+  padding: 5px 10px;
+  border-radius: var(--borderRadiusCard);
+  font-family: var(--proximaNovaMedium);
+  font-weight: var(--weightNormal);
+  font-size: var(--categorySize);
+  border: none;
+  cursor: pointer;
 }
-.category::selection{
-    background-color: var(--selectColor);
+.category::selection {
+  background-color: var(--selectColor);
 }

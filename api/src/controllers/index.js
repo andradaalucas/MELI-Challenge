@@ -3,8 +3,7 @@ const axios = require("axios");
 //Guardo informacion sensible en un archivo .env
 const { GET_ALL_ITEMS, GET_ITEM_BY_ID, GET_CATEGORIES, GET_ITEM_BY_SEARCH } =
   process.env;
-//Esta funcion es para separar el precio cada 3 cifras
-const { separador } = require("./auxiliar.js");
+
 
 const author = {
   name: "Lucas",
@@ -41,7 +40,7 @@ const getItemById = async (id) => {
       title: responseItem.title,
       price: {
         currency: responseItem.currency_id,
-        amount: separador(responseItem.price),
+        amount: responseItem.price.toLocaleString("es-ES"),
         decimals: null,
       },
       picture: responseItem.pictures.map((el) => el.url),
@@ -66,7 +65,7 @@ const getAllItems = async (name) => {
         title: el.title,
         price: {
           currency: el.prices.prices[0].currency_id,
-          amount: separador(el.prices.prices[0].amount),
+          amount: el.prices.prices[0].amount.toLocaleString("es-ES"),
           decimals: null,
         },
         picture: el.thumbnail,
@@ -90,7 +89,7 @@ const getAllItems = async (name) => {
       title: el.title,
       price: {
         currency: el.prices.prices[0].currency_id,
-        amount: separador(el.prices.prices[0].amount),
+        amount: el.prices.prices[0].amount.toLocaleString("es-ES"),
         decimals: null,
       },
       picture: el.thumbnail,
